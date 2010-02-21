@@ -10,5 +10,9 @@ read.blast <- function(file){
     names(x) <- c("query.id", "subject.id", "identity", "alignment.length",
                   "missmatches", "gap.opens", "q.start", "q.end", "s.start",
                   "s.end", "evalue", "bit.score")
+    if(!all(sid <- x[,"subject.id"] %in% x[,"query.id"]))
+        warning("The following 'subject.id's do not occur as 'query.id's: ",
+                paste(x[!sid,"subject.id"], collapse = ", "),
+                "\nThis may lead to problems in subsequent analyses!")
     x
 }

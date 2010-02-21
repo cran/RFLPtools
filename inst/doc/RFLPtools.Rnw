@@ -119,6 +119,7 @@ Some bands may be missing ...
 <<sim3>>=
 ## Euclidean distance
 data(RFLPdata)
+data(RFLPref)
 nrBands(RFLPdata)
 res0 <- RFLPdist2(RFLPdata, nrBands = 9, nrMissing = 0)
 res1 <- RFLPdist2(RFLPdata, nrBands = 9, nrMissing = 1)
@@ -134,6 +135,18 @@ plot(hclust(res2), main = "2 bands missing")
 plot(hclust(res3), main = "3 bands missing")
 @
 \myinfig{1}{RFLPtools-sim4.pdf}
+Another possible visualization ...
+<<RFLPplot, fig = TRUE>>=
+par(mfrow = c(1,2))
+plot(hclust(RFLPdist(RFLPdata, nrBands = 3)), cex = 0.7)
+RFLPplot(RFLPdata, nrBands = 3, mar.bottom = 6, cex.axis = 0.8)
+@
+\myinfig{1}{RFLPtools-RFLPplot.pdf}
+Comparison to reference data ...
+<<RFLPrefplot, fig = TRUE>>=
+RFLPrefplot(RFLPdata, RFLPref, nrBands = 9, cex.axis = 0.8)
+@
+\myinfig{1}{RFLPtools-RFLPrefplot.pdf}
 %-------------------------------------------------------------------------------
 \section{BLAST data} 
 %-------------------------------------------------------------------------------
@@ -167,23 +180,20 @@ corresponding similarity matrix.
 If the similarity of a combination is not shown in the BLAST report file (because 
 the similarity was lower than 70\%), this comparison is included in the similarity 
 matrix with the result zero.
-<<simMatrix>>=
+<<simMatrix, eval = FALSE>>=
 res <- simMatrix(BLASTdata)
 @
 Optionally, the range of sequence length can be specified 
 to exclude sequences which were too short or too long, respectively.
 <<blast1>>=
-res1 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100, Max = 500)
-res2 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100)
-res3 <- simMatrix(BLASTdata, sequence.range = TRUE, Max = 500)
+res1 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100, Max = 450)
+res2 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 500)
 @
 We visualize the similarity matrix ...
 <<blast2, fig = TRUE>>=
-library(RColorBrewer)
 library(MKmisc)
-myCol <- colorRampPalette(brewer.pal(8, "RdYlGn"))(128)
-corPlot(res, col = myCol, minCor = 0, cex.axis = 0.5,
-        labels = colnames(res), title = "(Dis-)Similarity Plot")
+corPlot(res2, col = myCol, minCor = 0, cex.axis = 0.5,
+        labels = colnames(res2), title = "(Dis-)Similarity Plot")
 @
 \myinfig{1}{RFLPtools-blast2.pdf}
 Alternatively, ...
@@ -192,10 +202,11 @@ library(lattice)
 txt <- trellis.par.get("add.text")
 txt$cex <- 0.5
 trellis.par.set("add.text" = txt)
+myCol <- colorRampPalette(brewer.pal(8, "RdYlGn"))(128)
 @
 <<blast31, fig = TRUE>>=
-print(levelplot(res, col.regions = myCol,
-          at = do.breaks(c(0, max(res)), 128),
+print(levelplot(res2, col.regions = myCol,
+          at = do.breaks(c(0, max(res2)), 128),
           xlab = "", ylab = "", 
           ## Rotate labels of x axis
           scales = list(x = list(rot = 90)),
@@ -204,7 +215,7 @@ print(levelplot(res, col.regions = myCol,
 \myinfig{1}{RFLPtools-blast31.pdf}
 We can also convert the similarity matrix to an object of S3 class \code{"dist"}.
 <<blast4>>=
-res.d <- sim2dist(res)
+res.d <- sim2dist(res2)
 @
 After the conversion we can for instance perform hierarchical clustering ...
 <<blast5, fig = TRUE>>=

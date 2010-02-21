@@ -12,6 +12,12 @@ simMatrix <- function(x, sequence.range = FALSE, Min, Max){
     if(!all(vars %in% names(x))){
         stop("Variables", vars[which(!(vars %in% names(x)))], "are not present in 'x'!")
     }
+    if(!all(sid <- x[,"subject.id"] %in% x[,"query.id"])){
+        warning("The following 'subject.id's do not occur as 'query.id's: ",
+                paste(x[!sid,"subject.id"], collapse = ", "),
+                "\nThese IDs have been removed before computing the similarity matrix!")
+        x <- x[sid,]
+    }
     ind <- x[,"query.id"] == x[,"subject.id"]
 
     x1 <- x[ind,]

@@ -1,19 +1,19 @@
-if(!exists("meta") || is.null(meta)) meta <- packageDescription("RFLP")
+if(!exists("meta") || is.null(meta)) meta <- packageDescription("RFLPtools")
 year <- sub("-.*", "", meta$Date)
 note <- sprintf("R package version %s", meta$Version)
 
-citHeader("To cite package RFLP in publications use:")
+citHeader("To cite package RFLPtools in publications use:")
 
 citEntry(entry="Manual",
-         title = "RFLP",
+         title = "RFLPtools: Tools to analyse RFLP data",
          author = personList(as.person("F. Flessa"), 
-			     as.person("A. Kehl"), 
-			     as.person("M. Kohl")),
+                             as.person("A. Kehl"), 
+                             as.person("M. Kohl")),
          language = "English",
          year = year,
          note = note,
          type = "R package",
          textVersion = paste("Flessa, F., Kehl, A., and Kohl, M.",
                              sprintf("(%s).", year),
-                             "RFLP.",
+                             "RFLPtools: Tools to analyse RFLP data.",
                              paste(note, ".", sep = "")))

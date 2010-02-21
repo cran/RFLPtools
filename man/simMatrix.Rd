@@ -51,13 +51,15 @@ simMatrix(x, sequence.range = FALSE, Min, Max)
 data(BLASTdata)
 
 ## without sequence range
+## code takes some time
+\dontrun{
 res <- simMatrix(BLASTdata)
+}
 
 ## with sequence range
 range(BLASTdata$alignment.length)
-res1 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100, Max = 500)
-res2 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100)
-res3 <- simMatrix(BLASTdata, sequence.range = TRUE, Max = 500)
+res1 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100, Max = 450)
+res2 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 500)
 }
 \keyword{multivariate}
 \keyword{cluster}

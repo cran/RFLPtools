@@ -15,7 +15,7 @@ Tools to analyse RFLP-data
 \tabular{ll}{
 Package: \tab RFLPtools\cr
 Version: \tab 1.0 \cr
-Date: \tab 2010-02-10 \cr
+Date: \tab 2010-02-21 \cr
 Depends: \tab R(>= 2.9.0), stats, utils, grDevices, RColorBrewer\cr
 Suggests: \tab lattice, MKmisc\cr
 License: \tab LGPL-3\cr
@@ -49,8 +49,16 @@ data(RFLPdata)
 res <- RFLPdist(RFLPdata)
 plot(hclust(res[[1]]), main = "Euclidean distance")
 
+par(mfrow = c(1,2))
+plot(hclust(RFLPdist(RFLPdata, nrBands = 3)), cex = 0.7)
+RFLPplot(RFLPdata, nrBands = 3, mar.bottom = 6, cex.axis = 0.8)
+
+data(RFLPref)
+RFLPrefplot(RFLPdata, RFLPref, nrBands = 6, cex.axis = 0.8)
+
+
 data(BLASTdata)
-res <- simMatrix(BLASTdata)
+res <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 500)
 library(RColorBrewer)
 library(MKmisc)
 myCol <- colorRampPalette(brewer.pal(8, "RdYlGn"))(128)

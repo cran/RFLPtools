@@ -33,34 +33,33 @@ sim2dist(x, maxSim = 1)
 data(BLASTdata)
 
 ## without sequence range
+\dontrun{
 res <- simMatrix(BLASTdata)
+}
 
 ## with sequence range
 range(BLASTdata$alignment.length)
-res1 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100, Max = 500)
-res2 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100)
-res3 <- simMatrix(BLASTdata, sequence.range = TRUE, Max = 500)
+res1 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100, Max = 450)
+res2 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 500)
 
 ## visualize similarity matrix
-library(RColorBrewer)
 library(MKmisc)
-
-myCol <- colorRampPalette(brewer.pal(8, "RdYlGn"))(128)
-corPlot(res, col = myCol, minCor = 0, 
-        labels = colnames(res), title = "(Dis-)Similarity Plot")
+corPlot(res2, minCor = 0, 
+        labels = colnames(res2), title = "(Dis-)Similarity Plot")
 
 
 ## or
 library(lattice)
-levelplot(res, col.regions = myCol,
-          at = do.breaks(c(0, max(res)), 128),
+myCol <- colorRampPalette(brewer.pal(8, "RdYlGn"))(128)
+levelplot(res2, col.regions = myCol,
+          at = do.breaks(c(0, max(res2)), 128),
           xlab = "", ylab = "",
           ## Rotate label of x axis
           scales = list(x = list(rot = 90)),
           main = "(Dis-)Similarity Plot")
 
 ## convert to distance
-res.d <- sim2dist(res)
+res.d <- sim2dist(res2)
 
 ## hierarchical clustering
 plot(hclust(res.d))
