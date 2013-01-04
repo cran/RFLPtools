@@ -3,6 +3,17 @@
 ###############################################################################
 
 ###########################################################
+## Version 1.5
+###########################################################
+- update of vignette
+- extension of function RFLPdist2: additional option that missing bands
+  occur only below a specified LOD
+- new function RFLPcombine to combine RFLP datasets
+- new function RFLPlod to remove bands below a given limit LOD
+- more flexible arguments for functions RFLPplot and RFLPrefplot
+
+
+###########################################################
 ## Version 1.4
 ###########################################################
 - correction of some minor bugs
@@ -11,12 +22,14 @@
 - updated affiliations in vignette and added some explanations regarding the 
   use of NCBI BLAST
 - added option "sep" to function "read.blast".
-  
+
+
 ###########################################################
 ## Version 1.3
 ###########################################################
 - added function diffDist for distance matrix computation based on
   successive differences
+
   
 ###########################################################
 ## Version 1.2
@@ -27,6 +40,7 @@
 - in examples now use of simPlot instead of corPlot, hence requires package
   MKmisc version 0.8
 
+  
 ###########################################################
 ## Version 1.1
 ###########################################################
@@ -35,6 +49,7 @@
 - added warnings for BLAST datasets for the case that there are subject.ids 
   which do not occur as query.ids
 - extended vignette and package Rd-file by RFLPplot and RFLPrefplot examples
+
 
 ###########################################################
 ## Version 1.0
