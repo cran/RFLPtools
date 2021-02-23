@@ -19,7 +19,7 @@
 \details{
   This example data set for RFLP reference consists of seven RFLP reference 
   samples. Taxon names are assigned by sequence comparison with GenBank 
-  database (\url{http://www.ncbi.nlm.nih.gov/BLAST/}), and supplemented with 
+  database (\url{https://www.ncbi.nlm.nih.gov/BLAST/}), and supplemented with 
   imaginary accession numbers.
 }
 \source{

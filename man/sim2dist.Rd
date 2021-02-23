@@ -47,7 +47,7 @@ res1 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 100, Max = 450)
 res2 <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 500)
 
 ## visualize similarity matrix
-library(MKmisc)
+library(MKomics)
 simPlot(res2, minVal = 0, 
         labels = colnames(res2), title = "(Dis-)Similarity Plot")
 

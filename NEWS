@@ -3,6 +3,22 @@
 ###############################################################################
 
 ###########################################################
+## Version 1.8
+###########################################################
+- Update of Author fields in DESCRIPTION file
+- Corrected wrong link to BLAST in vignette
+
+
+###########################################################
+## Version 1.7
+###########################################################
+- Restructering of the package, adapting to the newest version of R
+- DESCRIPTION file: moved packages from Depends to Imports
+- Updated CITATION file
+- Switched from MKmisc to MKomics
+
+
+###########################################################
 ## Version 1.6
 ###########################################################
 - added reference Flessa et al. (2013) to man files.

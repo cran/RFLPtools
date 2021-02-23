@@ -3,7 +3,7 @@
 \alias{RFLPtools}
 \docType{package}
 \title{
-Tools to analyse RFLP-data
+Tools To Analyse RFLP-Data
 }
 \description{
   \pkg{RFLPtools} provides functions to analyse DNA fragment samples 
@@ -14,17 +14,18 @@ Tools to analyse RFLP-data
 \details{
 \tabular{ll}{
 Package: \tab RFLPtools\cr
-Version: \tab 1.6 \cr
-Date: \tab 2014-08-13 \cr
-Depends: \tab R(>= 3.0.0), stats, utils, graphics, grDevices, RColorBrewer\cr
-Suggests: \tab lattice, MKmisc(>= 0.8)\cr
+Version: \tab 1.8 \cr
+Date: \tab 2021-02-23 \cr
+Depends: \tab R(>= 4.0.0)\cr
+Imports: \tab stats, utils, graphics, grDevices, RColorBrewer\cr
+Suggests: \tab knitr, rmarkdown, lattice, MKomics\cr
 License: \tab LGPL-3\cr
 }}
 
 
 \author{
   Fabienne Flessa \email{Fabienne.Flessa@uni-bayreuth.de},\cr
-  Alexandra Kehl \email{Alexandra.Kehl@botgarten.uni-tuebingen.de},\cr
+  Alexandra Kehl \email{Alexandra.Kehl@.uni-tuebingen.de},\cr
   Mohammed Aslam Imtiaz,\cr
   Matthias Kohl \email{Matthias.Kohl@stamats.de}\cr
 
@@ -32,9 +33,9 @@ License: \tab LGPL-3\cr
 }
 
 \references{
-  Local Blast download: \url{ftp://ftp.ncbi.nih.gov/blast/executables/release/}
+  Local Blast download: \url{https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download}
   
-  Blast News: \url{http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastNews}
+  Blast News: \url{https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastNews}
   
   Ian A. Dickie, Peter G. Avis, David J. McLaughlin, Peter B. Reich. 
   Good-Enough RFLP Matcher (GERM) program.
@@ -74,7 +75,7 @@ data(RFLPref)
 RFLPrefplot(RFLPdata, RFLPref, nrBands = 6, cex.axis = 0.8)
 
 
-library(MKmisc)
+library(MKomics)
 data(BLASTdata)
 res <- simMatrix(BLASTdata, sequence.range = TRUE, Min = 500)
 myCol <- colorRampPalette(brewer.pal(8, "RdYlGn"))(128)

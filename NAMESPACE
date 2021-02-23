@@ -1,4 +1,8 @@
-import("RColorBrewer")
+importFrom("grDevices", "colorRampPalette", "dev.new")
+importFrom("graphics", "abline", "axis", "box", "matlines", "par",  "title")
+importFrom("stats", "as.dendrogram", "as.dist", "cutree", "dist", "hclust", "order.dendrogram", "runif")
+importFrom("utils", "combn", "read.delim", "read.table", "tail", "write.table")
+importFrom("RColorBrewer", "brewer.pal")
 export(diffDist,
        FragMatch,
        germ,

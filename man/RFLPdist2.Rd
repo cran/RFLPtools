@@ -92,7 +92,7 @@ plot(hclust(res0), main = "0 bands missing")
 plot(hclust(res1.lod), main = "1 band missing below LOD")
 
 ## Similarity matrix
-library(MKmisc)
+library(MKomics)
 myCol <- colorRampPalette(brewer.pal(8, "RdYlGn"))(128)
 ord <- order.dendrogram(as.dendrogram(hclust(res1)))
 temp <- as.matrix(res1)

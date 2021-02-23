@@ -29,11 +29,11 @@ RFLPplot(x, nrBands, nrMissing, distfun = dist,
   \item{colBands}{ color for the bands. Has to be of length 1 or number of samples. 
   If missing, \code{"Set1"} of \pkg{RColorBrewer} is used; see
   \code{\link[RColorBrewer]{ColorBrewer}}. }
-  \item{xlab}{ passed to function \code{\link[graphics]{plot}}. }
-  \item{ylab}{ passed to function \code{\link[graphics]{plot}}. }
-  \item{ylim}{ passed to function \code{\link[graphics]{plot}}. If missing an appropriate
+  \item{xlab}{ passed to function \code{\link[base]{plot}}. }
+  \item{ylab}{ passed to function \code{\link[base]{plot}}. }
+  \item{ylim}{ passed to function \code{\link[base]{plot}}. If missing an appropriate
   range of y-values is computed. }
-  \item{\dots}{ additional arguments passed to function \code{\link[graphics]{plot}}
+  \item{\dots}{ additional arguments passed to function \code{\link[base]{plot}}
   except \code{xlim} which is defined inside of \code{RFLPplot}. }
 }
 \details{

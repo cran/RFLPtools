@@ -76,7 +76,7 @@ cgroups50 <- cutree(clust4bd, h=50)
 cgroups50
 
 ## or
-library(MKmisc)
+library(MKomics)
 res3 <- RFLPdist(RFLPdata, distfun = corDist)
 res3$"9"
 
@@ -89,7 +89,7 @@ plot(hclust(res3[[1]]), main = "Pearson correlation distance")
 
 
 ## Similarity matrix
-library(MKmisc)
+library(MKomics)
 myCol <- colorRampPalette(brewer.pal(8, "RdYlGn"))(128)
 ord <- order.dendrogram(as.dendrogram(hclust(res[[1]])))
 temp <- as.matrix(res[[1]])

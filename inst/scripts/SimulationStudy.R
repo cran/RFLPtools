@@ -1,6 +1,6 @@
 ## load packages RFLPtools (version >= 1.6), MKmisc
 library(RFLPtools)
-library(MKmisc)
+library(MKomics)
 
 ## general parameters
 M <- 5 # finally use M <- 1000

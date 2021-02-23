@@ -48,11 +48,15 @@ write.hclust(x, file, prefix, h = NULL, k = NULL, append = FALSE, dec = ",")
 data(RFLPdata)
 res <- RFLPdist(RFLPdata, nrBands = 4)
 cl <- hclust(res)
+\dontrun{
 write.hclust(cl, file = "Test.txt", prefix = "Bd4", h = 50)
+}
 
 res <- RFLPdist2(RFLPdata, nrBands = 4, nrMissing = 1)
 cl <- hclust(res)
+\dontrun{
 write.hclust(cl, file = "Test.txt", append = TRUE, prefix = "Bd4_Mis1", h = 60)
+}
 }
 \keyword{file}
 \keyword{connection}
