@@ -50,9 +50,9 @@ read.blast(file, sep = "\t")
   }
 }
 \references{
-  Standalone Blast download: ftp://ftp.ncbi.nih.gov/blast/executables/release/
+  Standalone Blast download: \url{https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/}
   
-  Blast News: http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastNews
+  Blast News: \url{https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastNews}
   
   Flessa, F., Kehl, A., Kohl, M.
   Analysing diversity and community structures using PCR-RFLP: a new software application.
@@ -60,7 +60,7 @@ read.blast(file, sep = "\t")
 }
 \author{ 
   Fabienne Flessa \email{Fabienne.Flessa@uni-bayreuth.de},\cr
-  Alexandra Kehl \email{Alexandra.Kehl@botgarten.uni-tuebingen.de},\cr
+  Alexandra Kehl \email{Alexandra.Kehl@uni-tuebingen.de},\cr
   Matthias Kohl \email{Matthias.Kohl@stamats.de} 
 }
 %\note{}

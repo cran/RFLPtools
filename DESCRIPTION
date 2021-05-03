@@ -1,8 +1,8 @@
 Package: RFLPtools
 Type: Package
 Title: Tools to Analyse RFLP Data
-Version: 1.8
-Date: 2021-02-23
+Version: 1.9
+Date: 2021-05-03
 Authors@R: c(person("Fabienne", "Flessa", role = "aut",
                   email = "Fabienne.Flessa@uni-bayreuth.de"),
              person("Alexandra", "Kehl", role = "aut",
@@ -24,6 +24,6 @@ Suggests: knitr, rmarkdown, lattice, MKomics
 VignetteBuilder: knitr
 License: LGPL-3
 NeedsCompilation: no
-Packaged: 2021-02-23 14:07:14 UTC; kohlm
+Packaged: 2021-05-03 19:03:19 UTC; kohlm
 Repository: CRAN
-Date/Publication: 2021-02-23 15:00:03 UTC
+Date/Publication: 2021-05-03 20:00:02 UTC

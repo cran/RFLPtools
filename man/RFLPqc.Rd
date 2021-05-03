@@ -53,7 +53,7 @@ RFLPqc(x, rm.band1 = TRUE, QC.lo = 0.8, QC.up = 1.07, QC.rm = FALSE)
 }
 \author{ 
   Fabienne Flessa \email{Fabienne.Flessa@uni-bayreuth.de},\cr
-  Alexandra Kehl \email{Alexandra.Kehl@botgarten.uni-tuebingen.de},\cr
+  Alexandra Kehl \email{Alexandra.Kehl@uni-tuebingen.de},\cr
   Matthias Kohl \email{Matthias.Kohl@stamats.de} 
 }
 %\note{}

@@ -14,8 +14,8 @@ Tools To Analyse RFLP-Data
 \details{
 \tabular{ll}{
 Package: \tab RFLPtools\cr
-Version: \tab 1.8 \cr
-Date: \tab 2021-02-23 \cr
+Version: \tab 1.9 \cr
+Date: \tab 2021-05-03 \cr
 Depends: \tab R(>= 4.0.0)\cr
 Imports: \tab stats, utils, graphics, grDevices, RColorBrewer\cr
 Suggests: \tab knitr, rmarkdown, lattice, MKomics\cr
