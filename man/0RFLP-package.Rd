@@ -14,8 +14,8 @@ Tools To Analyse RFLP-Data
 \details{
 \tabular{ll}{
 Package: \tab RFLPtools\cr
-Version: \tab 1.9 \cr
-Date: \tab 2021-05-03 \cr
+Version: \tab 2.0 \cr
+Date: \tab 2022-02-07 \cr
 Depends: \tab R(>= 4.0.0)\cr
 Imports: \tab stats, utils, graphics, grDevices, RColorBrewer\cr
 Suggests: \tab knitr, rmarkdown, lattice, MKomics\cr
@@ -25,7 +25,7 @@ License: \tab LGPL-3\cr
 
 \author{
   Fabienne Flessa \email{Fabienne.Flessa@uni-bayreuth.de},\cr
-  Alexandra Kehl \email{Alexandra.Kehl@.uni-tuebingen.de},\cr
+  Alexandra Kehl \email{Alexandra.Kehl@uni-tuebingen.de},\cr
   Mohammed Aslam Imtiaz,\cr
   Matthias Kohl \email{Matthias.Kohl@stamats.de}\cr
 
